@@ -151,7 +151,19 @@ void PlayScene::Update(float deltaTime) {
                 // delete UIGroup;
                 // delete imgTarget;
                 // Win.
-                Engine::GameEngine::GetInstance().ChangeScene("win"); // BUG FOUND! Bukan "win-scene".
+
+                // TODO PROJECT 2-2: Write the score into scoreboard file -- `Score = Money * lives/100`
+                std::ofstream file_out;
+                file_out.open("2025_I2P2_TowerDefense/Resource/scoreboard.txt", std::fstream::app); // Use appending file output mode!
+                if (!file_out.fail()) {
+                    file_out << "Anonymous " << (float) (this->GetMoney() * (this->lives / 100)); // Since we haven't dealt with registration, we use the name "Anonymous" temporarily.
+                } else {
+                    std::cout << "[BUG] `scoreboard.txt` not found!" << std::endl;
+                    exit(1);
+                }
+                file_out.close(); // Save memory!!!
+
+                Engine::GameEngine::GetInstance().ChangeScene("win"); // BUG FOUND! Bukan "win-scene".              
             }
             continue;
         }
