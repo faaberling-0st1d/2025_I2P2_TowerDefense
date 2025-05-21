@@ -407,14 +407,18 @@ void PlayScene::ConstructUI() {
 }
 
 void PlayScene::UIBtnClicked(int id) {
+    Turret *next_preview = nullptr;
+    if (id == 0 && money >= MachineGunTurret::Price)
+        next_preview = new MachineGunTurret(0, 0);
+    else if (id == 1 && money >= LaserTurret::Price)
+        next_preview = new LaserTurret(0, 0);
+    if (!next_preview)
+        return;   // not enough money or invalid turret.
+
     if (preview)
         UIGroup->RemoveObject(preview->GetObjectIterator());
-    if (id == 0 && money >= MachineGunTurret::Price)
-        preview = new MachineGunTurret(0, 0);
-    else if (id == 1 && money >= LaserTurret::Price)
-        preview = new LaserTurret(0, 0);
-    if (!preview)
-        return;
+    preview = next_preview;
+    
     preview->Position = Engine::GameEngine::GetInstance().GetMousePosition();
     preview->Tint = al_map_rgba(255, 255, 255, 200);
     preview->Enabled = false;
