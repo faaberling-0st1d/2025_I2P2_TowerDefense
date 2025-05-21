@@ -9,6 +9,7 @@
 #include <vector>
 
 #include "Enemy/Enemy.hpp"
+#include "Enemy/PlaneEnemy.hpp"
 #include "Enemy/SoldierEnemy.hpp"
 #include "Enemy/TankEnemy.hpp"
 #include "Engine/AudioHelper.hpp"
@@ -25,7 +26,7 @@
 #include "UI/Component/Label.hpp"
 
 // TODO HACKATHON-4 (1/3): Trace how the game handles keyboard input.
-// TODO HACKATHON-4 (2/3): Find the cheat code sequence in this file.
+// TODO HACKATHON-4 (2/3): Find the cheat code sequence in this file. :D
 // TODO HACKATHON-4 (3/3): When the cheat code is entered, a plane should be spawned and added to the scene.
 // TODO HACKATHON-5 (1/4): There's a bug in this file, which crashes the game when you win. Try to find it.
 // TODO HACKATHON-5 (2/4): The "LIFE" label are not updated when you lose a life. Try to fix it.
@@ -37,11 +38,15 @@ const int PlayScene::BlockSize = 64;
 const float PlayScene::DangerTime = 7.61;
 const Engine::Point PlayScene::SpawnGridPoint = Engine::Point(-1, 0);
 const Engine::Point PlayScene::EndGridPoint = Engine::Point(MapWidth, MapHeight - 1);
+
+// Cheat code sequence!
 const std::vector<int> PlayScene::code = {
     ALLEGRO_KEY_UP, ALLEGRO_KEY_UP, ALLEGRO_KEY_DOWN, ALLEGRO_KEY_DOWN,
     ALLEGRO_KEY_LEFT, ALLEGRO_KEY_RIGHT, ALLEGRO_KEY_LEFT, ALLEGRO_KEY_RIGHT,
-    ALLEGRO_KEY_B, ALLEGRO_KEY_A, ALLEGRO_KEYMOD_SHIFT, ALLEGRO_KEY_ENTER
+    ALLEGRO_KEY_B, ALLEGRO_KEY_A, ALLEGRO_KEY_RSHIFT /* ORIGINAL: ALLEGRO_KEYMOD_SHIFT */, ALLEGRO_KEY_ENTER
 };
+#define CODE_LEN 12
+
 Engine::Point PlayScene::GetClientSize() {
     return Engine::Point(MapWidth * BlockSize, MapHeight * BlockSize);
 }
@@ -50,7 +55,7 @@ void PlayScene::Initialize() {
     keyStrokes.clear();
     ticks = 0;
     deathCountDown = -1;
-    lives = 10;
+    lives = 100;
     money = 150;
     SpeedMult = 1;
     // Add groups from bottom to top.
@@ -135,17 +140,18 @@ void PlayScene::Update(float deltaTime) {
         if (enemyWaveData.empty()) {
             if (EnemyGroup->GetObjects().empty()) {
                 // Free resources.
-                /*delete TileMapGroup;
-                delete GroundEffectGroup;
-                delete DebugIndicatorGroup;
-                delete TowerGroup;
-                delete EnemyGroup;
-                delete BulletGroup;
-                delete EffectGroup;
-                delete UIGroup;
-                delete imgTarget;*/
+                // [TODO HACKATHON 5-1] Attempt to decomment this section.
+                // delete TileMapGroup;
+                // delete GroundEffectGroup;
+                // delete DebugIndicatorGroup;
+                // delete TowerGroup;
+                // delete EnemyGroup;
+                // delete BulletGroup;
+                // delete EffectGroup;
+                // delete UIGroup;
+                // delete imgTarget;
                 // Win.
-                Engine::GameEngine::GetInstance().ChangeScene("win-scene");
+                Engine::GameEngine::GetInstance().ChangeScene("win"); // BUG FOUND! Bukan "win-scene".
             }
             continue;
         }
@@ -161,8 +167,9 @@ void PlayScene::Update(float deltaTime) {
                 EnemyGroup->AddNewObject(enemy = new SoldierEnemy(SpawnCoordinate.x, SpawnCoordinate.y));
                 break;
             // TODO HACKATHON-3 (2/3): Add your new enemy here.
-            // case 2:
-            //     ...
+            case 2:
+                EnemyGroup->AddNewObject(enemy = new PlaneEnemy(SpawnCoordinate.x, SpawnCoordinate.y));
+                break;
             case 3:
                 EnemyGroup->AddNewObject(enemy = new TankEnemy(SpawnCoordinate.x, SpawnCoordinate.y));
                 break;
@@ -255,6 +262,9 @@ void PlayScene::OnMouseUp(int button, int mx, int my) {
     }
 }
 void PlayScene::OnKeyDown(int keyCode) {
+    // To check if the cheat code is entered.
+    static int code_top = 0;
+
     IScene::OnKeyDown(keyCode);
     if (keyCode == ALLEGRO_KEY_TAB) {
         DebugMode = !DebugMode;
@@ -263,6 +273,7 @@ void PlayScene::OnKeyDown(int keyCode) {
         if (keyStrokes.size() > code.size())
             keyStrokes.pop_front();
     }
+    
     if (keyCode == ALLEGRO_KEY_Q) {
         // Hotkey for MachineGunTurret.
         UIBtnClicked(0);
@@ -274,9 +285,27 @@ void PlayScene::OnKeyDown(int keyCode) {
         // Hotkey for Speed up.
         SpeedMult = keyCode - ALLEGRO_KEY_0;
     }
+
+    // Cheat Code Handling
+    if (keyCode == code[code_top] || (keyCode == ALLEGRO_KEY_LSHIFT && code_top == CODE_LEN - 2)) {
+        code_top++;
+        if (code_top == CODE_LEN) {
+            // New Plane (BUKAN PLANEENEMY!!!!)
+            Plane *plane;
+            EffectGroup->AddNewObject(plane = new Plane);
+            // Money + 10,000
+            this->EarnMoney(10000); // Remember not to modify this->money directly!
+            // Reset code_top to 0.
+            code_top = 0;
+        }
+    } else {
+        code_top = 0;
+    }
 }
 void PlayScene::Hit() {
     lives--;
+    // [TODO HACKATHON 5-2] Attempt to update UILives
+    UILives->Text = std::string("Life ") + std::to_string(lives);
     if (lives <= 0) {
         Engine::GameEngine::GetInstance().ChangeScene("lose");
     }
@@ -425,6 +454,8 @@ std::vector<std::vector<int>> PlayScene::CalculateBFSDistance() {
         // TODO PROJECT-1 (1/1): Implement a BFS starting from the most right-bottom block in the map.
         //               For each step you should assign the corresponding distance to the most right-bottom block.
         //               mapState[y][x] is TILE_DIRT if it is empty.
+        
+        
     }
     return map;
 }

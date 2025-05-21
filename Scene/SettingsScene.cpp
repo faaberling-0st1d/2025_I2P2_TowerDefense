@@ -2,6 +2,7 @@
 #include <functional>
 #include <memory>
 #include <string>
+#include <iostream>
 
 #include "Engine/AudioHelper.hpp"
 #include "Engine/GameEngine.hpp"

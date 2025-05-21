@@ -12,7 +12,7 @@ namespace Engine {
     ImageButton::ImageButton(std::string img, std::string imgIn, float x, float y, float w, float h, float anchorX, float anchorY) : Image(img, x, y, w, h, anchorX, anchorY), imgOut(Resources::GetInstance().GetBitmap(img)), imgIn(Resources::GetInstance().GetBitmap(imgIn)) {
         Point mouse = GameEngine::GetInstance().GetMousePosition();
         mouseIn = Collider::IsPointInBitmap(Point((mouse.x - Position.x) * GetBitmapWidth() / Size.x + Anchor.x * GetBitmapWidth(), (mouse.y - Position.y) * GetBitmapHeight() / Size.y + Anchor.y * GetBitmapHeight()), bmp);
-        if (!mouseIn || !Enabled) bmp = imgOut;
+        if (!mouseIn || !Enabled) bmp = this->imgOut;
         else bmp = this->imgIn;
     }
     void ImageButton::SetOnClickCallback(std::function<void(void)> onClickCallback) {

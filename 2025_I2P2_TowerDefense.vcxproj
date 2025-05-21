@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{135549B9-1968-3D8F-9B88-8B77766F1507}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>2025_I2P2_TowerDefense</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">2025_I2P2_TowerDefense.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">2025_I2P2_TowerDefense</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">2025_I2P2_TowerDefense.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">2025_I2P2_TowerDefense</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">2025_I2P2_TowerDefense.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">2025_I2P2_TowerDefense</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">2025_I2P2_TowerDefense.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">2025_I2P2_TowerDefense</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\.;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Resource;C:\allegro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\.;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Resource;C:\allegro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\.;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Resource;C:\allegro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>liballegro_monolith.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/allegro/lib;C:/allegro/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense/Debug/2025_I2P2_TowerDefense.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense/Debug/2025_I2P2_TowerDefense.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\.;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Resource;C:\allegro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\.;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Resource;C:\allegro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\.;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Resource;C:\allegro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>liballegro_monolith.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/allegro/lib;C:/allegro/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense/Release/2025_I2P2_TowerDefense.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense/Release/2025_I2P2_TowerDefense.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\.;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Resource;C:\allegro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\.;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Resource;C:\allegro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\.;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Resource;C:\allegro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>liballegro_monolith.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/allegro/lib;C:/allegro/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense/MinSizeRel/2025_I2P2_TowerDefense.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense/MinSizeRel/2025_I2P2_TowerDefense.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\.;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Resource;C:\allegro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\.;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Resource;C:\allegro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\.;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Resource;C:\allegro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>liballegro_monolith.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/allegro/lib;C:/allegro/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense/RelWithDebInfo/2025_I2P2_TowerDefense.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense/RelWithDebInfo/2025_I2P2_TowerDefense.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense" "-BC:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense" --check-stamp-file "C:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TIClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CMakeDetermineLinkerId.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\3.29.2\CMakeCCompiler.cmake;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\3.29.2\CMakeCXXCompiler.cmake;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\3.29.2\CMakeRCCompiler.cmake;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\3.29.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense" "-BC:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense" --check-stamp-file "C:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TIClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CMakeDetermineLinkerId.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\3.29.2\CMakeCCompiler.cmake;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\3.29.2\CMakeCXXCompiler.cmake;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\3.29.2\CMakeRCCompiler.cmake;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\3.29.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense" "-BC:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense" --check-stamp-file "C:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TIClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CMakeDetermineLinkerId.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\3.29.2\CMakeCCompiler.cmake;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\3.29.2\CMakeCXXCompiler.cmake;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\3.29.2\CMakeRCCompiler.cmake;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\3.29.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense" "-BC:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense" --check-stamp-file "C:/Users/alber/3. NTHU2024/3.2. 11320_SEMESTER/CS135601_Introduction to Programming II/PROJECT II/2025_I2P2_TowerDefense/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TIClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CMakeDetermineLinkerId.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\3.29.2\CMakeCCompiler.cmake;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\3.29.2\CMakeCXXCompiler.cmake;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\3.29.2\CMakeRCCompiler.cmake;C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\3.29.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Bullet\Bullet.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Bullet\Bullet.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Bullet\FireBullet.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Bullet\FireBullet.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Bullet\LaserBullet.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Bullet\LaserBullet.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Enemy\Enemy.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Enemy\Enemy.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Enemy\SoldierEnemy.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Enemy\SoldierEnemy.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Enemy\TankEnemy.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Enemy\TankEnemy.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Allegro5Exception.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Allegro5Exception.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\AudioHelper.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\AudioHelper.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Collider.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Collider.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\GameEngine.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\GameEngine.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Group.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Group.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\IControl.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\IControl.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\IObject.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\IObject.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\IScene.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\IScene.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\LOG.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\LOG.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Point.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Point.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Resources.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Resources.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Sprite.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Sprite.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\LoseScene.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\LoseScene.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\PlayScene.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\PlayScene.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\StageSelectScene.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\StageSelectScene.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\StartScene.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\StartScene.h" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\WinScene.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\WinScene.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Turret\LaserTurret.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Turret\LaserTurret.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Turret\MachineGunTurret.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Turret\MachineGunTurret.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Turret\Turret.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Turret\Turret.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Turret\TurretButton.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Turret\TurretButton.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Animation\DirtyEffect.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Animation\DirtyEffect.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Animation\ExplosionEffect.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Animation\ExplosionEffect.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Animation\Plane.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Animation\Plane.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Component\Image.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Component\Image.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Component\ImageButton.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Component\ImageButton.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Component\Label.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Component\Label.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Component\Slider.cpp" />
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Component\Slider.hpp" />
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\ZERO_CHECK.vcxproj">
+      <Project>{FB1B2211-EA5E-348C-B366-91B92E60C238}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

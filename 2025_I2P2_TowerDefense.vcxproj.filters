@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Bullet\Bullet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Bullet\FireBullet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Bullet\LaserBullet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Enemy\Enemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Enemy\SoldierEnemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Enemy\TankEnemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Allegro5Exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\AudioHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Collider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\GameEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Group.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\IControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\IObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\IScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\LOG.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Point.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Resources.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Sprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\LoseScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\PlayScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\StageSelectScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\StartScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\WinScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Turret\LaserTurret.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Turret\MachineGunTurret.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Turret\Turret.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Turret\TurretButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Animation\DirtyEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Animation\ExplosionEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Animation\Plane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Component\Image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Component\ImageButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Component\Label.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Component\Slider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Bullet\Bullet.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Bullet\FireBullet.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Bullet\LaserBullet.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Enemy\Enemy.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Enemy\SoldierEnemy.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Enemy\TankEnemy.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Allegro5Exception.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\AudioHelper.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Collider.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\GameEngine.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Group.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\IControl.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\IObject.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\IScene.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\LOG.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Point.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Resources.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Engine\Sprite.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\LoseScene.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\PlayScene.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\StageSelectScene.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\StartScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Scene\WinScene.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Turret\LaserTurret.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Turret\MachineGunTurret.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Turret\Turret.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\Turret\TurretButton.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Animation\DirtyEffect.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Animation\ExplosionEffect.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Animation\Plane.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Component\Image.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Component\ImageButton.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Component\Label.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\UI\Component\Slider.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\alber\3. NTHU2024\3.2. 11320_SEMESTER\CS135601_Introduction to Programming II\PROJECT II\2025_I2P2_TowerDefense\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{72339D51-B462-3198-BA8B-7C1131D33D09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{75F32095-844A-33AC-93E5-09EAC75161EB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
