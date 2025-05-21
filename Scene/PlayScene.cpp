@@ -444,29 +444,40 @@ std::vector<std::vector<int>> PlayScene::CalculateBFSDistance() {
     std::queue<Engine::Point> que;
     // Push end point.
     // BFS from end point.
-    if (mapState[MapHeight - 1][MapWidth - 1] != TILE_DIRT)
+    if (mapState[MapHeight - 1][MapWidth - 1] != TILE_DIRT) // mapState[Y][X]
         return map;
-    que.push(Engine::Point(MapWidth - 1, MapHeight - 1));
-    map[MapHeight - 1][MapWidth - 1] = 0;
+    que.push(Engine::Point(MapWidth - 1, MapHeight - 1));   // Engine::Point(X, Y)
+    map[MapHeight - 1][MapWidth - 1] = 0;                   // map[Y][X]
     while (!que.empty()) {
         Engine::Point p = que.front();
         que.pop();
         // TODO PROJECT-1 (1/1): Implement a BFS starting from the most right-bottom block in the map.
         //               For each step you should assign the corresponding distance to the most right-bottom block.
-        //               mapState[y][x] is TILE_DIRT if it is empty.   
+        //               mapState[y][x] is TILE_DIRT if it is empty.
+        std::cout << "TEST: (" << p.y << "," << p.x << ")" << std::endl;
         for (int j = -1; j <= 1; j++) {
             for (int i = -1; i <= 1; i++) {
-                if ((j!=0 && i!=0)                         /* Not the point itself */ \
+                if (!(j==0 && i==0)                        /* Not the point itself */ \
                     && (p.y+j < MapHeight) && (p.y+j >= 0) /* Neighbor has reasonable y value */ \
                     && (p.x+i < MapWidth)  && (p.x+i >= 0) /* Neighbor has reasonable x value */ \
-                    && mapState[p.y+j][p.x+i] != TILE_DIRT /* The point is not empty */ \
+                    && mapState[p.y+j][p.x+i] == TILE_DIRT /* The point (in map) is TILE_DIRT */ \
                     && map[p.y+j][p.x+i] == -1) {          /* The map value of the point is yet to be calculated */
                     
                     map[p.y+j][p.x+i] = (map[p.y][p.x] + std::abs(j) + std::abs(i));
-                    que.push(Engine::Point(p.y+j, p.x+i));
+                    std::cout << "[TEST] map[p.y+j][p.x+i] = " << map[p.y+j][p.x+i] << std::endl; // Debugger.
+                    que.push(Engine::Point(p.x+i, p.y+j));
                 }
             }
         }
     }
+
+    // Map BFS debugging
+    std::cout << "TEST: map:" << std::endl;
+    for (int j = 0; j < MapHeight; j++) {
+        for (int i = 0; i < MapWidth; i++) std::cout << map[j][i] << " ";
+        std::cout << std::endl;
+    }
+    std::cout << "TEST: map[MapHeight - 1][MapWidth - 1]: " << map[MapHeight - 1][MapWidth - 1] << std::endl; 
+    
     return map;
 }
