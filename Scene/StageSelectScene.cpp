@@ -61,10 +61,3 @@ void StageSelectScene::PlayOnClick(int stage) {
 void StageSelectScene::ScoreboardOnClick() {
     Engine::GameEngine::GetInstance().ChangeScene("scoreboard-scene");
 }
-// void StageSelectScene::BGMSlideOnValueChanged(float value) {
-//     AudioHelper::ChangeSampleVolume(bgmInstance, value);
-//     AudioHelper::BGMVolume = value;
-// }
-// void StageSelectScene::SFXSlideOnValueChanged(float value) {
-//     AudioHelper::SFXVolume = value;
-// }
