@@ -5,16 +5,19 @@
 #include "Engine/LOG.hpp"
 #include "Scene/LoseScene.hpp"
 #include "Scene/PlayScene.hpp"
+#include "Scene/ScoreboardScene.hpp"
+#include "Scene/SettingsScene.hpp"
 #include "Scene/StageSelectScene.hpp"
 #include "Scene/WinScene.hpp"
 #include "Scene/StartScene.h"
-#include "Scene/SettingsScene.hpp"
+
 
 int main(int argc, char **argv) {
 	Engine::LOG::SetConfig(true);
 	Engine::GameEngine& game = Engine::GameEngine::GetInstance();
 
     // TODO HACKATHON-2 (2/3): Register Scenes here
+	game.AddNewScene("scoreboard-scene", new ScoreboardScene()); // Creare scene "scoreboard-scene" (TODO PROJECT 2)
 	game.AddNewScene("settings", new SettingsScene()); // Create scene "settings".
     game.AddNewScene("stage-select", new StageSelectScene());
 	game.AddNewScene("play", new PlayScene());

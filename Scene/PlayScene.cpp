@@ -471,13 +471,13 @@ std::vector<std::vector<int>> PlayScene::CalculateBFSDistance() {
         }
     }
 
-    // Map BFS debugging
-    std::cout << "TEST: map:" << std::endl;
-    for (int j = 0; j < MapHeight; j++) {
-        for (int i = 0; i < MapWidth; i++) std::cout << map[j][i] << " ";
-        std::cout << std::endl;
-    }
-    std::cout << "TEST: map[MapHeight - 1][MapWidth - 1]: " << map[MapHeight - 1][MapWidth - 1] << std::endl; 
+    // BFS map debugging
+    // std::cout << "TEST: map:" << std::endl;
+    // for (int j = 0; j < MapHeight; j++) {
+    //     for (int i = 0; i < MapWidth; i++) std::cout << map[j][i] << " ";
+    //     std::cout << std::endl;
+    // }
+    // std::cout << "TEST: map[MapHeight - 1][MapWidth - 1]: " << map[MapHeight - 1][MapWidth - 1] << std::endl; 
     
     return map;
 }

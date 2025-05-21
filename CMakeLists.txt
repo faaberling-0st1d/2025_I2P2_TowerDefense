@@ -60,8 +60,10 @@ add_executable(2025_I2P2_TowerDefense
     Scene/LoseScene.hpp
     Scene/PlayScene.cpp
     Scene/PlayScene.hpp
-    Scene/SettingsScene.cpp # Add Setting Scene .c file
-    Scene/SettingsScene.hpp # Add Setting Scene .h file
+    Scene/ScoreboardScene.cpp # Add Scoreboard Scene .cpp file (TODO PROJECT 2)
+    Scene/ScoreboardScene.hpp # Add Scoreboard Scene .hpp file (TODO PROJECT 2)
+    Scene/SettingsScene.cpp   # Add Setting Scene .cpp file
+    Scene/SettingsScene.hpp   # Add Setting Scene .hpp file
     Scene/StageSelectScene.cpp
     Scene/StageSelectScene.hpp
     Scene/StartScene.cpp

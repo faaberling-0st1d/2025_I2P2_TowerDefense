@@ -15,7 +15,7 @@ public:
     void Terminate() override;
     void PlayOnClick(int stage);
     void ScoreboardOnClick();
-    void BackOnClick(int stage);
+    void BackOnClick();
 
     // void BGMSlideOnValueChanged(float value);
     // void SFXSlideOnValueChanged(float value);
