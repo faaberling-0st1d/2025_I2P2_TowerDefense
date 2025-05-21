@@ -154,9 +154,9 @@ void PlayScene::Update(float deltaTime) {
 
                 // TODO PROJECT 2-2: Write the score into scoreboard file -- `Score = Money * lives/100`
                 std::ofstream file_out;
-                file_out.open("2025_I2P2_TowerDefense/Resource/scoreboard.txt", std::fstream::app); // Use appending file output mode!
+                file_out.open("Resource/scoreboard.txt", std::fstream::app); // Use appending file output mode!
                 if (!file_out.fail()) {
-                    file_out << "Anonymous " << (float) (this->GetMoney() * (this->lives / 100)); // Since we haven't dealt with registration, we use the name "Anonymous" temporarily.
+                    file_out << std::endl << "Anonymous " << (float) (this->GetMoney() * ((float) this->lives / (float) 100)); // Since we haven't dealt with registration, we use the name "Anonymous" temporarily.
                 } else {
                     std::cout << "[BUG] `scoreboard.txt` not found!" << std::endl;
                     exit(1);
@@ -418,7 +418,7 @@ void PlayScene::UIBtnClicked(int id) {
     if (preview)
         UIGroup->RemoveObject(preview->GetObjectIterator());
     preview = next_preview;
-    
+
     preview->Position = Engine::GameEngine::GetInstance().GetMousePosition();
     preview->Tint = al_map_rgba(255, 255, 255, 200);
     preview->Enabled = false;

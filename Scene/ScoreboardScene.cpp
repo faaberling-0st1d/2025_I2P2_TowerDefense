@@ -28,7 +28,7 @@ void ScoreboardScene::Initialize() {
     // Scoreboard Text
     AddNewObject(new Engine::Label("Scoreboard", "pirulen.ttf", 40, halfW, halfH * 1 / 6, 0, 203, 0, 255, 0.5, 0.5));
     std::ifstream file_in; // Input file stream.
-    file_in.open("2025_I2P2_TowerDefense/Resource/scoreboard.txt"); // Open the file.
+    file_in.open("Resource/scoreboard.txt"); // Open the file.
     if (file_in.fail()) {
         std::cout << "[ERROR] 2025_I2P2_TowerDefense/Resource/scoreboard.txt not found!" << std::endl;
         exit(1);
