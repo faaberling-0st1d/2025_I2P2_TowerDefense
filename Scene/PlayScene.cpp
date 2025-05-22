@@ -39,6 +39,9 @@ const float PlayScene::DangerTime = 7.61;
 const Engine::Point PlayScene::SpawnGridPoint = Engine::Point(-1, 0);
 const Engine::Point PlayScene::EndGridPoint = Engine::Point(MapWidth, MapHeight - 1);
 
+// Avoiding repeated file output
+int result_outputted = 0;
+
 // Cheat code sequence!
 const std::vector<int> PlayScene::code = {
     ALLEGRO_KEY_UP, ALLEGRO_KEY_UP, ALLEGRO_KEY_DOWN, ALLEGRO_KEY_DOWN,
@@ -58,6 +61,9 @@ void PlayScene::Initialize() {
     lives = 100;
     money = 150;
     SpeedMult = 1;
+
+    result_outputted = 0; // For normal file input!
+
     // Add groups from bottom to top.
     AddNewObject(TileMapGroup = new Group());
     AddNewObject(GroundEffectGroup = new Group());
@@ -156,7 +162,10 @@ void PlayScene::Update(float deltaTime) {
                 std::ofstream file_out;
                 file_out.open("Resource/scoreboard.txt", std::fstream::app); // Use appending file output mode!
                 if (!file_out.fail()) {
-                    file_out << std::endl << "Anonymous " << (float) (this->GetMoney() * ((float) this->lives / (float) 100)); // Since we haven't dealt with registration, we use the name "Anonymous" temporarily.
+                    if (!result_outputted) {
+                        file_out << std::endl << "Anonymous " << (float) (this->GetMoney() * ((float) this->lives / (float) 100)); // Since we haven't dealt with registration, we use the name "Anonymous" temporarily.
+                        result_outputted = 1;
+                    }
                 } else {
                     std::cout << "[BUG] `scoreboard.txt` not found!" << std::endl;
                     exit(1);
@@ -488,11 +497,11 @@ std::vector<std::vector<int>> PlayScene::CalculateBFSDistance() {
     }
 
     // BFS map debugging
-    // std::cout << "TEST: map:" << std::endl;
-    // for (int j = 0; j < MapHeight; j++) {
-    //     for (int i = 0; i < MapWidth; i++) std::cout << map[j][i] << " ";
-    //     std::cout << std::endl;
-    // }
+    std::cout << "TEST: map:" << std::endl;
+    for (int j = 0; j < MapHeight; j++) {
+        for (int i = 0; i < MapWidth; i++) std::cout << map[j][i] << " ";
+        std::cout << std::endl;
+    }
     // std::cout << "TEST: map[MapHeight - 1][MapWidth - 1]: " << map[MapHeight - 1][MapWidth - 1] << std::endl; 
     
     return map;
