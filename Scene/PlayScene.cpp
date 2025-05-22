@@ -483,6 +483,7 @@ std::vector<std::vector<int>> PlayScene::CalculateBFSDistance() {
         for (int j = -1; j <= 1; j++) {
             for (int i = -1; i <= 1; i++) {
                 if (!(j==0 && i==0)                        /* Not the point itself */ \
+                    && !(std::abs(j) == std::abs(i))       /* Should not iterate the diagonal neighbors first! */\
                     && (p.y+j < MapHeight) && (p.y+j >= 0) /* Neighbor has reasonable y value */ \
                     && (p.x+i < MapWidth)  && (p.x+i >= 0) /* Neighbor has reasonable x value */ \
                     && mapState[p.y+j][p.x+i] == TILE_DIRT /* The point (in map) is TILE_DIRT */ \

@@ -19,6 +19,8 @@
 #include "UI/Component/Label.hpp"
 #include "UI/Component/Slider.hpp"
 
+// void ScoreboardSorter
+
 void ScoreboardScene::Initialize() {
     int w = Engine::GameEngine::GetInstance().GetScreenSize().x;
     int h = Engine::GameEngine::GetInstance().GetScreenSize().y;
