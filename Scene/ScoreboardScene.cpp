@@ -27,12 +27,19 @@
 #include "UI/Component/Slider.hpp"
 
 // Store & Sort the scoreboard.
-typedef std::multimap<int, std::string, std::less<int>> SortingMultimap;
+typedef std::multimap<int, std::string, std::greater<int>> SortingMultimap;
 SortingMultimap local_scoreboard; // Use a multimap to sort (score - name).
 std::list<Engine::Label *> lbl_list;
 int page_head = 0;
 
 void ScoreboardScene::Initialize() {
+    // Since the above three objects (local_scoreboard, lbl_list, page_head) is not created by the TAs, ...
+    // ... we have to initialize them manually.
+    local_scoreboard.clear(); // Clear multimap local_scoreboard.
+    lbl_list.clear();         // Clear list lbl_list.
+    page_head = 0;            // Set integer page_head = 0;
+
+    std::cout << "[DEBUGGER] Scoreboard Initiated!" << std::endl;
     int w = Engine::GameEngine::GetInstance().GetScreenSize().x;
     int h = Engine::GameEngine::GetInstance().GetScreenSize().y;
     int halfW = w / 2;
