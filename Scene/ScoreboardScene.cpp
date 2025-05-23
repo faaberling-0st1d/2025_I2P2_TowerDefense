@@ -24,21 +24,45 @@
 #include "UI/Component/Slider.hpp"
 
 // ScoreboardScoreSorter
+typedef std::multimap<int, std::string, std::less<int>> SortingMap;
 void ScoreboardScoreSorter() {
-    std::multimap<int, std::string> sort_map; // Use a multimap to sort (score - name).
+    SortingMap _map; // Use a multimap to sort (score - name).
 
     std::ifstream in;
     in.open(SCOREBOARD_TXT);
     if (in.fail()) {
-        std::cout << "[ERROR] File \"" << SCOREBOARD_TXT << "\" not found!" << std::endl;
+        std::cout << "[ERROR] File \"" << SCOREBOARD_TXT << "\" not found! (MODE: file input)" << std::endl;
         exit(1);
     } else {
-        std::cout << "[LOG] File \"" << SCOREBOARD_TXT << "\" opened successfully!" << std::endl;
-        std::string name; int score;
-        in >> name >> score;
-        
+        std::cout << "[LOG] File \"" << SCOREBOARD_TXT << "\" opened successfully! Start sorting..." << std::endl;
+        while (!in.eof()) {
+            std::string name; int score;
+            in >> name >> score;
+            _map.insert({score, name});
+        }
+        in.close(); // Save memory!
+
+        // Rewrite the file.
+        std::ofstream out;
+        out.open(SCOREBOARD_TXT);
+        if (out.fail()) {
+            std::cout << "[ERROR] File \"" << SCOREBOARD_TXT << "\" not found! (MODE: file output)" << std::endl;
+            exit(1);
+        } else {
+            std::cout << "[LOG] File \"" << SCOREBOARD_TXT << "\" opened successfully! Start rewriting..." << std::endl;
+            SortingMap::iterator it = _map.begin();
+            out << it->second << " " << it->first; // Output format: `it->second(name) it->first(score)`
+            std::cout << "[DEBUGGER]" << std::endl; // Debugger.
+            std::cout << it->second << " " << it->first; // Debugger.
+            it++;
+            for (; it != _map.end(); it++) { // Please remember to move the iterator forward...
+                out << "\n" << it->second << " " << it->first; // Output format: `<endl>it->second(name) it->first(score)`
+                std::cout << "\n" << it->second << " " << it->first; // Debugger.
+            }
+            std::cout << std::endl; // Debugger.
+            out.close(); // Save memory!
+        }
     }
-    in.close();
 }
 
 void ScoreboardPrinter(ScoreboardScene *_this) {
