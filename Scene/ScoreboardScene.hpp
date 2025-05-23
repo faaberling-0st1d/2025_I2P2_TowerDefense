@@ -12,8 +12,17 @@ private:
 public:
     explicit ScoreboardScene() = default;
     void Initialize() override;
+    void Update(); // To update page for scoreboard.
     void Terminate() override;
     void BackOnClick();
+    void PrevPageOnClick(); // Prev Page Button Function
+    void NextPageOnClick(); // Next Page Button Function
+
+    // For scoreboard file management
+    void ScoreboardScoreSorter();
+    void ScoreboardPrinter();
+
+    void ClearScoreboardLabels();
 };
 
 #endif   // ScoreboardScene_HPP
