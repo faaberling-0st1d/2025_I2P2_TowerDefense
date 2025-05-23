@@ -6,6 +6,10 @@
 // File I/O
 #include <iostream>
 #include <fstream>
+#define SCOREBOARD_TXT "Resource/scoreboard.txt"
+
+// STL
+#include <map>
 
 #include "Engine/AudioHelper.hpp"
 #include "Engine/GameEngine.hpp"
@@ -19,7 +23,46 @@
 #include "UI/Component/Label.hpp"
 #include "UI/Component/Slider.hpp"
 
-// void ScoreboardSorter
+// ScoreboardScoreSorter
+void ScoreboardScoreSorter() {
+    std::multimap<int, std::string> sort_map; // Use a multimap to sort (score - name).
+
+    std::ifstream in;
+    in.open(SCOREBOARD_TXT);
+    if (in.fail()) {
+        std::cout << "[ERROR] File \"" << SCOREBOARD_TXT << "\" not found!" << std::endl;
+        exit(1);
+    } else {
+        std::cout << "[LOG] File \"" << SCOREBOARD_TXT << "\" opened successfully!" << std::endl;
+        std::string name; int score;
+        in >> name >> score;
+        
+    }
+    in.close();
+}
+
+void ScoreboardPrinter(ScoreboardScene *_this) {
+    int w = Engine::GameEngine::GetInstance().GetScreenSize().x;
+    int h = Engine::GameEngine::GetInstance().GetScreenSize().y;
+    int halfW = w / 2;
+    int halfH = h / 2;
+    
+    std::ifstream file_in; // Input file stream.
+    file_in.open(SCOREBOARD_TXT); // Open the file.
+    if (file_in.fail()) {
+        std::cout << "[ERROR] File \"" << SCOREBOARD_TXT << "\" not found!" << std::endl;
+        exit(1);
+    }
+    int h_delta = 60;
+    while (!file_in.eof()) {
+        std::string name, score;
+        file_in >> name >> score;
+        _this->AddNewObject(new Engine::Label(name, "pirulen.ttf", 40, halfW - 100, halfH * 1 / 6 + h_delta, 0, 101, 0, 255, 0.5, 0.5));
+        _this->AddNewObject(new Engine::Label(score, "pirulen.ttf", 40, halfW + 200, halfH * 1 / 6 + h_delta, 0, 101, 0, 255, 0.5, 0.5));
+        h_delta += 40;
+    }
+    file_in.close(); // Save memory!!!
+}
 
 void ScoreboardScene::Initialize() {
     int w = Engine::GameEngine::GetInstance().GetScreenSize().x;
@@ -29,21 +72,8 @@ void ScoreboardScene::Initialize() {
 
     // Scoreboard Text
     AddNewObject(new Engine::Label("Scoreboard", "pirulen.ttf", 40, halfW, halfH * 1 / 6, 0, 203, 0, 255, 0.5, 0.5));
-    std::ifstream file_in; // Input file stream.
-    file_in.open("Resource/scoreboard.txt"); // Open the file.
-    if (file_in.fail()) {
-        std::cout << "[ERROR] 2025_I2P2_TowerDefense/Resource/scoreboard.txt not found!" << std::endl;
-        exit(1);
-    }
-    int h_delta = 60;
-    while (!file_in.eof()) {
-        std::string name, score;
-        file_in >> name >> score;
-        AddNewObject(new Engine::Label(name, "pirulen.ttf", 40, halfW - 100, halfH * 1 / 6 + h_delta, 0, 101, 0, 255, 0.5, 0.5));
-        AddNewObject(new Engine::Label(score, "pirulen.ttf", 40, halfW + 200, halfH * 1 / 6 + h_delta, 0, 101, 0, 255, 0.5, 0.5));
-        h_delta += 40;
-    }
-    file_in.close(); // Save memory!!!
+    ScoreboardScoreSorter(); // Sort the score records first!
+    ScoreboardPrinter(this); // Print the scoreboard!
 
     // Back button (back to stage-select scene)
     Engine::ImageButton *btn;
