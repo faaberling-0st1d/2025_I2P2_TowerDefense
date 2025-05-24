@@ -52,22 +52,22 @@ void ScoreboardScene::Initialize() {
 
     Engine::ImageButton *btn;
     // PREV PAGE Button
-    btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/floor.png", halfW - 700, halfH * 3 / 2 - 50, 400, 100);
+    btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/floor.png", halfW - 700, halfH / 2 + 400, 400, 100);
     btn->SetOnClickCallback(std::bind(&ScoreboardScene::PrevPageOnClick, this));
     AddNewControlObject(btn);
-    AddNewObject(new Engine::Label("Prev page", "pirulen.ttf", 40, halfW - 500, halfH * 3 / 2, 0, 0, 0, 255, 0.5, 0.5));
+    AddNewObject(new Engine::Label("Prev page", "pirulen.ttf", 40, halfW - 500, halfH / 2 + 450, 0, 0, 0, 255, 0.5, 0.5));
     // NEXT PAGE Button
-    btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/floor.png", halfW + 300, halfH * 3 / 2 - 50, 400, 100);
+    btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/floor.png", halfW + 300, halfH / 2 + 400, 400, 100);
     btn->SetOnClickCallback(std::bind(&ScoreboardScene::NextPageOnClick, this));
     AddNewControlObject(btn);
-    AddNewObject(new Engine::Label("Next page", "pirulen.ttf", 40, halfW + 500, halfH * 3 / 2, 0, 0, 0, 255, 0.5, 0.5));
+    AddNewObject(new Engine::Label("Next page", "pirulen.ttf", 40, halfW + 500, halfH / 2 + 450, 0, 0, 0, 255, 0.5, 0.5));
 
 
     // Back button (back to stage-select scene)
-    btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/floor.png", halfW - 200, halfH * 3 / 2 - 50, 400, 100);
+    btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/floor.png", halfW - 200, halfH / 2 + 400, 400, 100);
     btn->SetOnClickCallback(std::bind(&ScoreboardScene::BackOnClick, this));
     AddNewControlObject(btn);
-    AddNewObject(new Engine::Label("Back", "pirulen.ttf", 48, halfW, halfH * 3 / 2, 0, 0, 0, 255, 0.5, 0.5));
+    AddNewObject(new Engine::Label("Back", "pirulen.ttf", 48, halfW, halfH / 2 + 450, 0, 0, 0, 255, 0.5, 0.5));
     
     // Not safe if release resource while playing, however we only free while change scene, so it's fine.
     bgmInstance = AudioHelper::PlaySample("select.ogg", true, AudioHelper::BGMVolume);

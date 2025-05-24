@@ -23,9 +23,12 @@
 #include "Turret/MachineGunTurret.hpp"
 #include "Turret/RocketTurret.hpp"
 #include "Turret/TurretButton.hpp"
+#include "Turret/TurretShovel.hpp"
 #include "UI/Animation/DirtyEffect.hpp"
 #include "UI/Animation/Plane.hpp"
 #include "UI/Component/Label.hpp"
+
+#include "UI/Component/ImageButton.hpp" // For shovel button
 
 // TODO HACKATHON-4 (1/3): Trace how the game handles keyboard input.
 // TODO HACKATHON-4 (2/3): Find the cheat code sequence in this file. :D
@@ -428,6 +431,13 @@ void PlayScene::ConstructUI() {
     btn->SetOnClickCallback(std::bind(&PlayScene::UIBtnClicked, this, 2));
     UIGroup->AddNewControlObject(btn);
 
+    // Shovel Button
+    btn = new TurretButton("play/floor.png", "play/dirt.png",
+                           Engine::Sprite("play/tool-base.png", 1294, 636, 0, 0, 0, 0),
+                           Engine::Sprite("play/shovel.png", 1294, 636 - 8, 0, 0, 0, 0), 1294, 636, TurretShovel::Price);
+    btn->SetOnClickCallback(std::bind(&PlayScene::UIBtnClicked, this, -1));
+    UIGroup->AddNewControlObject(btn);
+
     int w = Engine::GameEngine::GetInstance().GetScreenSize().x;
     int h = Engine::GameEngine::GetInstance().GetScreenSize().y;
     int shift = 135 + 25;
@@ -444,6 +454,8 @@ void PlayScene::UIBtnClicked(int id) {
         next_preview = new LaserTurret(0, 0);
     else if (id == 2 && money >= RocketTurret::Price)
         next_preview = new RocketTurret(0, 0);
+    else if (id == -1 && money >= TurretShovel::Price)
+        next_preview = new TurretShovel(0, 0);
     if (!next_preview)
         return;   // not enough money or invalid turret.
 
