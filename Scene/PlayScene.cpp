@@ -159,18 +159,22 @@ void PlayScene::Update(float deltaTime) {
                 // Win.
 
                 // TODO PROJECT 2-2: Write the score into scoreboard file -- `Score = Money * lives/100`
-                std::ofstream file_out;
-                file_out.open("Resource/scoreboard.txt", std::fstream::app); // Use appending file output mode!
-                if (!file_out.fail()) {
+                std::ofstream fout;
+                fout.open("Resource/scoreboard.txt", std::fstream::app); // Use appending file output mode!
+                if (!fout.fail()) {
                     if (!result_outputted) {
-                        file_out << std::endl << "Anonymous " << (float) (this->GetMoney() * ((float) this->lives / (float) 100)); // Since we haven't dealt with registration, we use the name "Anonymous" temporarily.
+                        fout.seekp(0, std::ofstream::end);
+                        std::streamsize fsize = fout.tellp();
+                        if (fsize != 0)
+                            fout << std::endl;
+                        fout << "Albert " << (float) (this->GetMoney() * ((float) this->lives / (float) 100)); // Since we haven't dealt with registration, we use the name "Anonymous" temporarily.
                         result_outputted = 1;
                     }
+                    fout.close(); // Save memory!!!
                 } else {
                     std::cout << "[BUG] `scoreboard.txt` not found!" << std::endl;
                     exit(1);
                 }
-                file_out.close(); // Save memory!!!
 
                 Engine::GameEngine::GetInstance().ChangeScene("win"); // BUG FOUND! Bukan "win-scene".              
             }

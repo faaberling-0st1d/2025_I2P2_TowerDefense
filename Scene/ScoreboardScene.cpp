@@ -39,7 +39,7 @@ void ScoreboardScene::Initialize() {
     lbl_list.clear();         // Clear list lbl_list.
     page_head = 0;            // Set integer page_head = 0;
 
-    std::cout << "[DEBUGGER] Scoreboard Initiated!" << std::endl;
+    std::cout << "[DEBUGGER] Scoreboard Initialized!" << std::endl;
     int w = Engine::GameEngine::GetInstance().GetScreenSize().x;
     int h = Engine::GameEngine::GetInstance().GetScreenSize().y;
     int halfW = w / 2;
@@ -110,19 +110,30 @@ void ScoreboardScene::NextPageOnClick() {
 void ScoreboardScene::ScoreboardScoreSorter() {
     local_scoreboard.clear(); // Reset our local scoreboard.
 
-    std::ifstream in;
-    in.open(SCOREBOARD_TXT);
-    if (in.fail()) {
+    std::ifstream fin;
+    fin.open(SCOREBOARD_TXT);
+    if (fin.fail()) {
         std::cout << "[ERROR] File \"" << SCOREBOARD_TXT << "\" not found! (MODE: file input)" << std::endl;
         exit(1);
     } else {
         std::cout << "[LOG] File \"" << SCOREBOARD_TXT << "\" opened successfully! Start sorting..." << std::endl;
-        while (!in.eof()) {
+
+        // Check if the file is empty.
+        fin.seekg(0, std::ifstream::end); // Move the file cursor to the end of the file
+        std::streamsize fsize = fin.tellg();
+        std::cout << "[DEBUGGER] fsize = " << fsize << std::endl;
+        if (fsize == 0) {
+            fin.close(); // Close the file. (Saving memory!)
+            return; // Do nothing.
+        }
+        
+        fin.seekg(0); // Move the file cursor to the head of the file again!
+        while (!fin.eof()) {
             std::string name; int score;
-            in >> name >> score;
+            fin >> name >> score;
             local_scoreboard.insert({score, name});
         }
-        in.close(); // Save memory!
+        fin.close(); // Save memory!
 
         // Rewrite the file.
         std::ofstream out;
