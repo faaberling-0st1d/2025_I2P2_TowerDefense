@@ -8,6 +8,8 @@
 #include <fstream>
 #define SCOREBOARD_TXT "Resource/scoreboard.txt"
 #define MAX_LINES_PER_PAGE 5
+#include <chrono> // For date time file output
+#include <sstream>
 
 // STL
 #include <map>
@@ -26,9 +28,48 @@
 #include "UI/Component/Label.hpp"
 #include "UI/Component/Slider.hpp"
 
+typedef struct _myScoreLine {
+    std::string name;
+    int score;
+    std::string timestamp;
+} MyScoreLine;
+
+// String-to-tm* helper function.
+// std::tm str_to_tm(std::string rawTimestamp) {
+//     std::tm ret =  new std::tm;
+
+//     std::stringstream ss;
+//     ss << rawTimestamp;
+//     std::string t;
+
+//     // Format: <YYYY/MM/DD/HH:MM:SS>
+//     std::stringstream::getline(ss, t, '/');
+//     ret.tm_year = std::to_integer(t); // Year
+//     std::stringstream::getline(ss, t, '/');
+//     ret.tm_mon = std::to_integer(t); // Month
+//     std::stringstream::getline(ss, t, '/');
+//     ret.tm_mday = std::to_integer(t); // Date
+//     std::stringstream::getline(ss, t, ':');
+//     ret.tm_hour = std::to_integer(t); // hour
+//     std::stringstream::getline(ss, t, ':');
+//     ret.tm_hour = std::to_integer(t); // Minute
+//     std::stringstream::getline(ss, t, ':');
+//     ret.tm_hour = std::to_integer(t); // Second
+
+//     ret.tm_isdst = -1;
+
+//     return ret;
+// }
+
+// void myTimestampPrinter(std::tm &timestamp) {
+//     std::cout << (timestamp.tm_year + 1900) << "/" << (timestamp.tm_mon + 1) << "/" << timestamp.tm_mday << "/"\
+//         << timestamp.tm_hour << ":" << timestamp.tm_min << ":" << timestamp.tm_sec;
+// }
+
 // Store & Sort the scoreboard.
-typedef std::multimap<int, std::string, std::greater<int>> SortingMultimap;
+typedef std::multimap<int, MyScoreLine, std::greater<int>> SortingMultimap;
 SortingMultimap local_scoreboard; // Use a multimap to sort (score - name).
+
 std::list<Engine::Label *> lbl_list;
 int page_head = 0;
 
@@ -129,9 +170,9 @@ void ScoreboardScene::ScoreboardScoreSorter() {
         
         fin.seekg(0); // Move the file cursor to the head of the file again!
         while (!fin.eof()) {
-            std::string name; int score;
-            fin >> name >> score;
-            local_scoreboard.insert({score, name});
+            std::string name; int score; std::string rawTimestamp;
+            fin >> name >> score >> rawTimestamp;
+            local_scoreboard.insert( { score , (MyScoreLine){name, score, rawTimestamp} } );
         }
         fin.close(); // Save memory!
 
@@ -144,13 +185,10 @@ void ScoreboardScene::ScoreboardScoreSorter() {
         } else {
             std::cout << "[LOG] File \"" << SCOREBOARD_TXT << "\" opened successfully! Start rewriting..." << std::endl;
             SortingMultimap::iterator it = local_scoreboard.begin();
-            out << it->second << " " << it->first; // Output format: `it->second(name) it->first(score)`
-            std::cout << "[DEBUGGER]" << std::endl; // Debugger.
-            std::cout << it->second << " " << it->first; // Debugger.
+            out << it->second.name << " " << it->first << " " << it->second.timestamp; // Output format: `it->second(name) it->first(score)`
             it++;
             for (; it != local_scoreboard.end(); it++) { // Please remember to move the iterator forward...
-                out << "\n" << it->second << " " << it->first; // Output format: `<endl>it->second(name) it->first(score)`
-                std::cout << "\n" << it->second << " " << it->first; // Debugger.
+                out << std::endl << it->second.name << " " << it->first << " " << it->second.timestamp; // Output format: `<endl>it->second.name it->first(score) it->second.timestamp`
             }
             std::cout << std::endl; // Debugger.
             out.close(); // Save memory!
@@ -171,20 +209,24 @@ void ScoreboardScene::ScoreboardPrinter() {
         std::cout << "[ERROR] File \"" << SCOREBOARD_TXT << "\" not found!" << std::endl;
         exit(1);
     }
-    int h_delta = 60;
+    int H_delta = 60;
     for (int line_i = 0;\
             (line_i < page_head + MAX_LINES_PER_PAGE && !file_in.eof()); line_i++) {
-        std::string name, score;
-        file_in >> name >> score;
+        std::string name, score, timestamp;
+        file_in >> name >> score >> timestamp;
         if (page_head <= line_i && line_i < page_head + MAX_LINES_PER_PAGE) { // The lines we want!
             Engine::Label *lbl;
-            lbl = new Engine::Label(name, "pirulen.ttf", 40, halfW - 100, halfH * 1 / 6 + h_delta, 0, 101, 0, 255, 0.5, 0.5); // Name label.
+            lbl = new Engine::Label(name, "pirulen.ttf", 40, halfW - 400, halfH * 1 / 6 + H_delta, 0, 101, 0, 255, 0.5, 0.5); // Name label.
             this->AddNewObject(lbl);
             lbl_list.push_back(lbl); // Add this name label into the label list.
-            lbl = new Engine::Label(score, "pirulen.ttf", 40, halfW + 200, halfH * 1 / 6 + h_delta, 0, 101, 0, 255, 0.5, 0.5); // Score label.
+            lbl = new Engine::Label(score, "pirulen.ttf", 40, halfW - 100, halfH * 1 / 6 + H_delta, 0, 101, 0, 255, 0.5, 0.5); // Score label.
             this->AddNewObject(lbl);
             lbl_list.push_back(lbl); // Add this score label into the label list.
-            h_delta += 40; // Increase the height delta if we really printed something.
+            lbl = new Engine::Label(timestamp, "pirulen.ttf", 32, halfW + 300, halfH * 1 / 6 + H_delta, 0, 101, 0, 255, 0.5, 0.5); // Timestamp label.
+            this->AddNewObject(lbl);
+            lbl_list.push_back(lbl);
+
+            H_delta += 40; // Increase the height delta if we really printed something.
         }
     }
     file_in.close(); // Save memory!!!

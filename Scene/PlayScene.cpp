@@ -30,6 +30,9 @@
 
 #include "UI/Component/ImageButton.hpp" // For shovel button
 
+#include <chrono> // For timestamp management
+#include <ctime>  // For timestamp management
+
 // TODO HACKATHON-4 (1/3): Trace how the game handles keyboard input.
 // TODO HACKATHON-4 (2/3): Find the cheat code sequence in this file. :D
 // TODO HACKATHON-4 (3/3): When the cheat code is entered, a plane should be spawned and added to the scene.
@@ -170,9 +173,17 @@ void PlayScene::Update(float deltaTime) {
                     if (!result_outputted) {
                         fout.seekp(0, std::ofstream::end);
                         std::streamsize fsize = fout.tellp();
-                        if (fsize != 0)
-                            fout << std::endl;
-                        fout << "Albert " << (float) (this->GetMoney() * ((float) this->lives / (float) 100)); // Since we haven't dealt with registration, we use the name "Anonymous" temporarily.
+                        if (fsize != 0) fout << std::endl; // Add a change line character at the beginning if the file is not empty.
+
+                        std::string name = "Albert"; // Default.
+                        int score = (int) (this->GetMoney() * ((float) this->lives / (float) 100)); // Formula: Score = Money * Lives(%)
+
+                        // Getting the current timestamp.
+                        std::time_t currentTime = std::time(nullptr);
+                        std::tm *localTime = std::localtime(&currentTime);
+                        std::string timestamp = std::to_string(localTime->tm_year + 1900) + "/" + std::to_string(localTime->tm_mon + 1) + "/" + std::to_string(localTime->tm_mday) + "/"\
+                                                + std::to_string(localTime->tm_hour) + ":" + std::to_string(localTime->tm_min) + ":" + std::to_string(localTime->tm_sec);
+                        fout << name << " " << score << " " << timestamp;
                         result_outputted = 1;
                     }
                     fout.close(); // Save memory!!!
