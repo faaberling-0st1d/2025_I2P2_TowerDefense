@@ -12,5 +12,6 @@ class RocketBullet : public Bullet {
 public:
     explicit RocketBullet(Engine::Point position, Engine::Point forwardDirection, float rotation, Turret *parent);
     void OnExplode(Enemy *enemy) override;
+    void Update(float deltaTime) override;
 };
 #endif // ROCKETBULLET_HPP

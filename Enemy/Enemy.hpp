@@ -7,6 +7,8 @@
 #include "Engine/Point.hpp"
 #include "Engine/Sprite.hpp"
 
+#include "Bullet/RocketBullet.hpp"
+
 class Bullet;
 class PlayScene;
 class Turret;
@@ -29,5 +31,7 @@ public:
     void UpdatePath(const std::vector<std::vector<int>> &mapDistance);
     void Update(float deltaTime) override;
     void Draw() const override;
+
+friend class RocketBullet;
 };
 #endif   // ENEMY_HPP

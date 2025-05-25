@@ -160,7 +160,6 @@ void PlayScene::Update(float deltaTime) {
         if (enemyWaveData.empty()) {
             if (EnemyGroup->GetObjects().empty()) {
                 // Free resources.
-                // [TODO HACKATHON 5-1] Attempt to decomment this section.
                 // delete TileMapGroup;
                 // delete GroundEffectGroup;
                 // delete DebugIndicatorGroup;
@@ -333,10 +332,8 @@ void PlayScene::OnKeyDown(int keyCode) {
             // New Plane (BUKAN PLANEENEMY!!!!)
             Plane *plane;
             EffectGroup->AddNewObject(plane = new Plane);
-            // Money + 10,000
-            this->EarnMoney(10000); // Remember not to modify this->money directly!
-            // Reset code_top to 0.
-            code_top = 0;
+            this->EarnMoney(10000); // Money + 10,000
+            code_top = 0; // Reset code_top to 0.
         }
     } else {
         code_top = 0;
