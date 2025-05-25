@@ -14,6 +14,7 @@
 #include "Enemy/SoldierEnemy.hpp"
 #include "Enemy/TankEnemy.hpp"
 #include "Engine/AudioHelper.hpp"
+#include "Engine/Collider.hpp" // For shovel (maybe?)
 #include "Engine/GameEngine.hpp"
 #include "Engine/Group.hpp"
 #include "Engine/LOG.hpp"
@@ -30,8 +31,13 @@
 
 #include "UI/Component/ImageButton.hpp" // For shovel button
 
-#include <chrono> // For timestamp management
-#include <ctime>  // For timestamp management
+// C++ Datetime management
+#include <chrono>
+#include <ctime>
+
+// The score line is incomplete, insert user name at the beginning ...
+// ... and output the score into `scoreboard.txt`
+#include "WinScene.hpp"
 
 // TODO HACKATHON-4 (1/3): Trace how the game handles keyboard input.
 // TODO HACKATHON-4 (2/3): Find the cheat code sequence in this file. :D
@@ -48,7 +54,7 @@ const Engine::Point PlayScene::SpawnGridPoint = Engine::Point(-1, 0);
 const Engine::Point PlayScene::EndGridPoint = Engine::Point(MapWidth, MapHeight - 1);
 
 // Avoiding repeated file output
-int result_outputted = 0;
+int scoreline_generated = 0;
 
 // Cheat code sequence!
 const std::vector<int> PlayScene::code = {
@@ -70,7 +76,7 @@ void PlayScene::Initialize() {
     money = 150;
     SpeedMult = 1;
 
-    result_outputted = 0; // For normal file input!
+    scoreline_generated = 0; // For normal file input!
 
     // Add groups from bottom to top.
     AddNewObject(TileMapGroup = new Group());
@@ -167,32 +173,19 @@ void PlayScene::Update(float deltaTime) {
                 // Win.
 
                 // TODO PROJECT 2-2: Write the score into scoreboard file -- `Score = Money * lives/100`
-                std::ofstream fout;
-                fout.open("Resource/scoreboard.txt", std::fstream::app); // Use appending file output mode!
-                if (!fout.fail()) {
-                    if (!result_outputted) {
-                        fout.seekp(0, std::ofstream::end);
-                        std::streamsize fsize = fout.tellp();
-                        if (fsize != 0) fout << std::endl; // Add a change line character at the beginning if the file is not empty.
+                if (!scoreline_generated) {
+                    int score = (int) (this->GetMoney() * ((float) this->lives / (float) 100)); // Formula: Score = Money * Lives(%)
+                    std::time_t currentTime = std::time(nullptr);
+                    std::tm *localTime = std::localtime(&currentTime);
+                    std::string timestamp = std::to_string(localTime->tm_year + 1900) + "/" + std::to_string(localTime->tm_mon + 1) + "/" + std::to_string(localTime->tm_mday) + "/"\
+                                            + std::to_string(localTime->tm_hour) + ":" + std::to_string(localTime->tm_min) + ":" + std::to_string(localTime->tm_sec);
+                    incomplete_score_line = " " + std::to_string(score) + " " + timestamp;
 
-                        std::string name = "Albert"; // Default.
-                        int score = (int) (this->GetMoney() * ((float) this->lives / (float) 100)); // Formula: Score = Money * Lives(%)
-
-                        // Getting the current timestamp.
-                        std::time_t currentTime = std::time(nullptr);
-                        std::tm *localTime = std::localtime(&currentTime);
-                        std::string timestamp = std::to_string(localTime->tm_year + 1900) + "/" + std::to_string(localTime->tm_mon + 1) + "/" + std::to_string(localTime->tm_mday) + "/"\
-                                                + std::to_string(localTime->tm_hour) + ":" + std::to_string(localTime->tm_min) + ":" + std::to_string(localTime->tm_sec);
-                        fout << name << " " << score << " " << timestamp;
-                        result_outputted = 1;
-                    }
-                    fout.close(); // Save memory!!!
-                } else {
-                    std::cout << "[BUG] `scoreboard.txt` not found!" << std::endl;
-                    exit(1);
+                    scoreline_generated = 1;
                 }
+                // ... Then, WinScene will be handling & outputting the score line.
 
-                Engine::GameEngine::GetInstance().ChangeScene("win"); // BUG FOUND! Bukan "win-scene".              
+                Engine::GameEngine::GetInstance().ChangeScene("win");
             }
             continue;
         }

@@ -216,13 +216,13 @@ void ScoreboardScene::ScoreboardPrinter() {
         file_in >> name >> score >> timestamp;
         if (page_head <= line_i && line_i < page_head + MAX_LINES_PER_PAGE) { // The lines we want!
             Engine::Label *lbl;
-            lbl = new Engine::Label(name, "pirulen.ttf", 40, halfW - 400, halfH * 1 / 6 + H_delta, 0, 101, 0, 255, 0.5, 0.5); // Name label.
+            lbl = new Engine::Label(name, "pirulen.ttf", 40, halfW - 350, halfH * 1 / 6 + H_delta, 0, 101, 0, 255, 0.5, 0.5); // Name label.
             this->AddNewObject(lbl);
             lbl_list.push_back(lbl); // Add this name label into the label list.
-            lbl = new Engine::Label(score, "pirulen.ttf", 40, halfW - 100, halfH * 1 / 6 + H_delta, 0, 101, 0, 255, 0.5, 0.5); // Score label.
+            lbl = new Engine::Label(score, "pirulen.ttf", 40, halfW, halfH * 1 / 6 + H_delta, 0, 101, 0, 255, 0.5, 0.5); // Score label.
             this->AddNewObject(lbl);
             lbl_list.push_back(lbl); // Add this score label into the label list.
-            lbl = new Engine::Label(timestamp, "pirulen.ttf", 32, halfW + 300, halfH * 1 / 6 + H_delta, 0, 101, 0, 255, 0.5, 0.5); // Timestamp label.
+            lbl = new Engine::Label(timestamp, "pirulen.ttf", 32, halfW + 400, halfH * 1 / 6 + H_delta, 0, 101, 0, 255, 0.5, 0.5); // Timestamp label.
             this->AddNewObject(lbl);
             lbl_list.push_back(lbl);
 
