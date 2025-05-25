@@ -35,9 +35,9 @@ void WinScene::Initialize() {
     AddNewObject(new Engine::Label("You Win!", "pirulen.ttf", 48, halfW, halfH / 4 - 10, 255, 255, 255, 255, 0.5, 0.5));
 
     // Input box
-    // textbox_img = new Engine::Image("play/tool-base.jpg", halfW, halfH + 50, 0, 0, 0.5, 0.5);
-    textbox_lbl = new Engine::Label("Nickname", "pirulen.ttf", 48, halfW, halfH / 4 + 50, 88, 88, 88, 255, 0.5, 0.5);
-    // AddNewObject(textbox_img);
+    textbox_img = new Engine::Image("win/textbox_img.png", halfW, halfH / 4 + 60, 0, 0, 0.5, 0.5);
+    textbox_lbl = new Engine::Label("Nickname", "pirulen.ttf", 48, halfW, halfH / 4 + 60, 10, 255, 255, 255, 0.5, 0.5);
+    AddNewObject(textbox_img);
     AddNewObject(textbox_lbl);
 
     Engine::ImageButton *btn;
@@ -71,11 +71,15 @@ void WinScene::BackOnClick(int stage) {
             if (fsize != 0) fout << std::endl; // Add a change line character at the beginning if the file is not empty.
 
             // Getting user's name.
+            if (textbox_lbl->Text.empty()) textbox_lbl->Text = "Anonymous"; // In case the user inputted an empty string.
             std::string score_line = (textbox_lbl->Text + incomplete_score_line);
             fout << score_line;
             result_outputted = 1;
         }
         fout.close(); // Save memory!!!
+
+        RemoveObject(textbox_lbl->GetObjectIterator()); // Remove textbox_lbl.
+        RemoveObject(textbox_img->GetObjectIterator()); // Remove textbox_img.
     } else {
         std::cout << "[BUG] `scoreboard.txt` not found!" << std::endl;
         exit(1);
@@ -100,7 +104,7 @@ void WinScene::OnKeyDown(int keycode) {
         textbox_lbl->Text += c;
 
     } else if (keycode == ALLEGRO_KEY_BACKSPACE) {
-        textbox_lbl->Text.pop_back();
+        if (!textbox_lbl->Text.empty()) textbox_lbl->Text.pop_back();
 
     } else {
         return;
