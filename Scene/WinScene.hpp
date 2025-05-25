@@ -15,10 +15,10 @@ public:
     void Initialize() override;
     void Terminate() override;
     void Update(float deltaTime) override;
-    // void OnMouseDown(int button, int mx, int my) override;
-    // void OnMouseUp(int button, int mx, int my) override;
+    void OnMouseDown(int button, int mx, int my) override;
+    void OnMouseUp(int button, int mx, int my) override;
     void OnKeyDown(int keyCode) override;
-    void BackOnClick(int stage);
+    void BackOnClick();
     void UpdateTextbox(int keycode);
 };
 
