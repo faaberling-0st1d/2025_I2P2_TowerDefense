@@ -329,7 +329,7 @@ void PlayScene::OnMouseUp(int button, int mx, int my) {
             OnMouseMove(mx, my);
 
         } else if (mapState[y][x] != TILE_OCCUPIED && ShovelMode) { // Use a shovel in a wrong way.          
-            ShovelMode = false;
+            std::cout << "[DEBUGGER] Should not put a shovel in the map!" << std::endl;
         }
     }
 }
@@ -485,15 +485,23 @@ void PlayScene::ConstructUI() {
 
 void PlayScene::UIBtnClicked(int id) {
     Turret *next_preview = nullptr;
-    if (id == 0 && money >= MachineGunTurret::Price)
+    if (id == 0 && money >= MachineGunTurret::Price) {
         next_preview = new MachineGunTurret(0, 0);
-    else if (id == 1 && money >= LaserTurret::Price)
+        ShovelMode = false;
+    
+    } else if (id == 1 && money >= LaserTurret::Price) {
         next_preview = new LaserTurret(0, 0);
-    else if (id == 2 && money >= RocketTurret::Price)
+        ShovelMode = false;
+    
+    } else if (id == 2 && money >= RocketTurret::Price) {
         next_preview = new RocketTurret(0, 0);
-    else if (id == -1 && money >= TurretShovel::Price)
+        ShovelMode = false;
+    
+    } else if (id == -1 && money >= TurretShovel::Price) {
         next_preview = new TurretShovel(0, 0);
         ShovelMode = true; // Start to use a shovel!
+    }
+
     if (!next_preview)
         return;   // not enough money or invalid turret.
 
@@ -552,7 +560,6 @@ std::vector<std::vector<int>> PlayScene::CalculateBFSDistance() {
         // TODO PROJECT-1 (1/1): Implement a BFS starting from the most right-bottom block in the map.
         //               For each step you should assign the corresponding distance to the most right-bottom block.
         //               mapState[y][x] is TILE_DIRT if it is empty.
-        std::cout << "TEST: (" << p.y << "," << p.x << ")" << std::endl;
         for (int j = -1; j <= 1; j++) {
             for (int i = -1; i <= 1; i++) {
                 if (!(j==0 && i==0)                        /* Not the point itself */ \
@@ -563,7 +570,6 @@ std::vector<std::vector<int>> PlayScene::CalculateBFSDistance() {
                     && map[p.y+j][p.x+i] == -1) {          /* The map value of the point is yet to be calculated */
                     
                     map[p.y+j][p.x+i] = (map[p.y][p.x] + std::abs(j) + std::abs(i));
-                    std::cout << "[TEST] map[p.y+j][p.x+i] = " << map[p.y+j][p.x+i] << std::endl; // Debugger.
                     que.push(Engine::Point(p.x+i, p.y+j));
                 }
             }

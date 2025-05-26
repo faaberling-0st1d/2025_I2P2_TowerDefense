@@ -1,6 +1,7 @@
 #ifndef PLAYSCENE_HPP
 #define PLAYSCENE_HPP
 #include <allegro5/allegro_audio.h>
+#include <map>
 #include <list>
 #include <memory>
 #include <utility>
@@ -8,6 +9,10 @@
 
 #include "Engine/IScene.hpp"
 #include "Engine/Point.hpp"
+
+// For others to use TurretMap.
+typedef std::map<Engine::Point, Turret *> Pos_Turret_Map;
+extern Pos_Turret_Map TurretMap;
 
 class Turret;
 namespace Engine {

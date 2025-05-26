@@ -1,6 +1,7 @@
 #include <allegro5/base.h>
 #include <random>
 #include <string>
+#include <iostream>
 
 #include "Enemy/Enemy.hpp"
 #include "Engine/AudioHelper.hpp"
@@ -34,9 +35,9 @@ void RocketBullet::Update(float deltaTime) {
             OnExplode(enemy);
             enemy->Hit(damage);
             if (enemy->speed > 0) enemy->speed--;
-            enemy->Tint = al_map_rgba(255 - 100, 255 - 100, 255, 255);
+            enemy->Tint = al_map_rgba(0, 255, 255, 255);
             getPlayScene()->BulletGroup->RemoveObject(objectIterator);
-            // AudioHelper::PlayAudio("452645__kyles__ice-grinding-cracking-freezing-designed.wav");
+            // AudioHelper::PlayAudio("freeze.wav");
             return;
         }
     }
