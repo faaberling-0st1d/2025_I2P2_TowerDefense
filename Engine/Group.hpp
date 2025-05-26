@@ -5,6 +5,7 @@
 
 #include "IControl.hpp"
 #include "IObject.hpp"
+#include "Enemy/MegaTankEnemy.hpp"
 
 namespace Engine {
     /// <summary>
@@ -197,6 +198,8 @@ namespace Engine {
         /// </summary>
         /// <returns>A linked-list of all controls contained.</returns>
         std::list<IControl *> GetControls();
+    
+    // friend class MegaTankEnemy; // Why this doesn't work?
     };
 }
 #endif   // GROUP_HPP

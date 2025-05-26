@@ -34,6 +34,7 @@ protected:
 
 public:
     static bool DebugMode;
+    static bool ShovelMode; // Using a shovel.
     static const std::vector<Engine::Point> directions;
     static const int MapWidth, MapHeight;
     static const int BlockSize;

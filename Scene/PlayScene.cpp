@@ -31,6 +31,9 @@
 
 #include "UI/Component/ImageButton.hpp" // For shovel button
 
+// STL
+#include <map>
+#include <unordered_map>
 // C++ Datetime management
 #include <chrono>
 #include <ctime>
@@ -46,6 +49,7 @@
 // TODO HACKATHON-5 (2/4): The "LIFE" label are not updated when you lose a life. Try to fix it.
 
 bool PlayScene::DebugMode = false;
+bool PlayScene::ShovelMode = false; // The flag = 1 when using a shovel.
 const std::vector<Engine::Point> PlayScene::directions = { Engine::Point(-1, 0), Engine::Point(0, -1), Engine::Point(1, 0), Engine::Point(0, 1) };
 const int PlayScene::MapWidth = 20, PlayScene::MapHeight = 13;
 const int PlayScene::BlockSize = 64;
@@ -55,6 +59,9 @@ const Engine::Point PlayScene::EndGridPoint = Engine::Point(MapWidth, MapHeight 
 
 // Avoiding repeated file output
 int scoreline_generated = 0;
+
+// A map (Position-Turret) to see which turret to delete
+std::map<Engine::Point, Turret *> TurretMap;
 
 // Cheat code sequence!
 const std::vector<int> PlayScene::code = {
@@ -77,6 +84,7 @@ void PlayScene::Initialize() {
     SpeedMult = 1;
 
     scoreline_generated = 0; // For normal file input!
+    TurretMap.clear();
 
     // Add groups from bottom to top.
     AddNewObject(TileMapGroup = new Group());
@@ -265,7 +273,7 @@ void PlayScene::OnMouseUp(int button, int mx, int my) {
     const int x = mx / BlockSize;
     const int y = my / BlockSize;
     if (button & 1) {
-        if (mapState[y][x] != TILE_OCCUPIED) {
+        if (mapState[y][x] != TILE_OCCUPIED && !ShovelMode) { // Consider putting a NORMAL turret
             if (!preview)
                 return;
             // Check if valid.
@@ -287,6 +295,7 @@ void PlayScene::OnMouseUp(int button, int mx, int my) {
             preview->Preview = false;
             preview->Tint = al_map_rgba(255, 255, 255, 255);
             TowerGroup->AddNewObject(preview);
+            TurretMap.insert({preview->Position, preview}); // Add the newly-constructed turret into MY TurretMap.
             // To keep responding when paused.
             preview->Update(0);
             // Remove Preview.
@@ -294,6 +303,33 @@ void PlayScene::OnMouseUp(int button, int mx, int my) {
 
             mapState[y][x] = TILE_OCCUPIED;
             OnMouseMove(mx, my);
+
+        } else if (mapState[y][x] == TILE_OCCUPIED && ShovelMode) { // Use the shovel in a correct way.
+            // Purchase the chance to shovel a turret
+            EarnMoney(-preview->GetPrice());
+            // Remove preview
+            preview->GetObjectIterator()->first = false;
+            UIGroup->RemoveObject(preview->GetObjectIterator());
+
+            // To keep responding when paused.
+            preview->Update(0);
+            // Remove Preview.
+            preview = nullptr;
+
+            // Delete the shovel originally in the block.
+            Engine::Point del_pt = (Engine::Point) {(float) (x * BlockSize + BlockSize / 2), (float) (y * BlockSize + BlockSize / 2)};
+            Turret* del = TurretMap[del_pt];
+            TowerGroup->RemoveObject(del->GetObjectIterator());
+            TurretMap.erase(del_pt);
+
+            // Leave shovel mode.
+            ShovelMode = false;
+
+            mapState[y][x] = TILE_FLOOR;
+            OnMouseMove(mx, my);
+
+        } else if (mapState[y][x] != TILE_OCCUPIED && ShovelMode) { // Use a shovel in a wrong way.          
+            ShovelMode = false;
         }
     }
 }
@@ -434,7 +470,7 @@ void PlayScene::ConstructUI() {
 
     // Shovel Button
     btn = new TurretButton("play/floor.png", "play/dirt.png",
-                           Engine::Sprite("play/tool-base.png", 1294, 636, 0, 0, 0, 0),
+                           Engine::Sprite("play/tower-base.png", 1294, 636, 0, 0, 0, 0),
                            Engine::Sprite("play/shovel.png", 1294, 636 - 8, 0, 0, 0, 0), 1294, 636, TurretShovel::Price);
     btn->SetOnClickCallback(std::bind(&PlayScene::UIBtnClicked, this, -1));
     UIGroup->AddNewControlObject(btn);
@@ -457,6 +493,7 @@ void PlayScene::UIBtnClicked(int id) {
         next_preview = new RocketTurret(0, 0);
     else if (id == -1 && money >= TurretShovel::Price)
         next_preview = new TurretShovel(0, 0);
+        ShovelMode = true; // Start to use a shovel!
     if (!next_preview)
         return;   // not enough money or invalid turret.
 
@@ -532,14 +569,6 @@ std::vector<std::vector<int>> PlayScene::CalculateBFSDistance() {
             }
         }
     }
-
-    // BFS map debugging
-    std::cout << "TEST: map:" << std::endl;
-    for (int j = 0; j < MapHeight; j++) {
-        for (int i = 0; i < MapWidth; i++) std::cout << map[j][i] << " ";
-        std::cout << std::endl;
-    }
-    // std::cout << "TEST: map[MapHeight - 1][MapWidth - 1]: " << map[MapHeight - 1][MapWidth - 1] << std::endl; 
     
     return map;
 }

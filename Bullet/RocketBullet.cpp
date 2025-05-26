@@ -34,6 +34,7 @@ void RocketBullet::Update(float deltaTime) {
             OnExplode(enemy);
             enemy->Hit(damage);
             if (enemy->speed > 0) enemy->speed--;
+            enemy->Tint = al_map_rgba(255 - 100, 255 - 100, 255, 255);
             getPlayScene()->BulletGroup->RemoveObject(objectIterator);
             // AudioHelper::PlayAudio("452645__kyles__ice-grinding-cracking-freezing-designed.wav");
             return;
