@@ -70,6 +70,9 @@ const std::vector<int> PlayScene::code = {
     ALLEGRO_KEY_B, ALLEGRO_KEY_A, ALLEGRO_KEY_RSHIFT /* ORIGINAL: ALLEGRO_KEYMOD_SHIFT */, ALLEGRO_KEY_ENTER
 };
 #define CODE_LEN 12
+int code_count = 3;      // Code count (For Code count reminder text)
+int code_count_tick = 0; // Code count reminder text ticks
+Engine::Label *code_count_lbl;
 
 Engine::Point PlayScene::GetClientSize() {
     return Engine::Point(MapWidth * BlockSize, MapHeight * BlockSize);
@@ -109,7 +112,15 @@ void PlayScene::Initialize() {
     Engine::Resources::GetInstance().GetBitmap("lose/benjamin-happy.png");
     // Start BGM.
     bgmId = AudioHelper::PlayBGM("play.ogg");
+
+    // Cheat code count reminder.
+    int w = Engine::GameEngine::GetInstance().GetScreenSize().x;
+    int h = Engine::GameEngine::GetInstance().GetScreenSize().y;
+    int halfW = w / 2;
+    int halfH = h / 2;
+    UIGroup->AddNewObject(code_count_lbl = new Engine::Label("Remaining Cheat Codes: " + std::to_string(code_count), "pirulen.ttf", 48, halfW - 100, halfH / 4, 0, 203, 203, 0, 0.5, 0.5));
 }
+
 void PlayScene::Terminate() {
     AudioHelper::StopBGM(bgmId);
     AudioHelper::StopSample(deathBGMInstance);
@@ -228,6 +239,21 @@ void PlayScene::Update(float deltaTime) {
         preview->Position = Engine::GameEngine::GetInstance().GetMousePosition();
         // To keep responding when paused.
         preview->Update(deltaTime);
+    }
+
+
+    // Cheat code count reminder label.
+    if (!DebugMode) {
+        if (1 <= code_count_tick && code_count_tick <= 40 * ALLEGRO_PI) {
+            if (code_count)
+                code_count_lbl->Color = al_map_rgba(0, 203, 203, 0 + 255 * std::sin(code_count_tick / (20 * ALLEGRO_PI)));
+            else
+                code_count_lbl->Color = al_map_rgba(203, 0, 0, 0 + 255 * std::sin(code_count_tick / (20 * ALLEGRO_PI)));
+            code_count_tick++;
+        } else {
+            code_count_lbl->Color = al_map_rgba(0, 203, 203, 0);
+            code_count_tick = 0;
+        }
     }
 }
 void PlayScene::Draw() const {
@@ -364,13 +390,18 @@ void PlayScene::OnKeyDown(int keyCode) {
     // Cheat Code Handling
     if (keyCode == code[code_top] || (keyCode == ALLEGRO_KEY_LSHIFT && code_top == CODE_LEN - 2)) {
         code_top++;
-        if (code_top == CODE_LEN) {
-            // New Plane (BUKAN PLANEENEMY!!!!)
+        if (code_top == CODE_LEN && code_count) {
+            // New Plane
             Plane *plane;
             EffectGroup->AddNewObject(plane = new Plane);
             this->EarnMoney(10000); // Money + 10,000
             code_top = 0; // Reset code_top to 0.
+
+            if (!DebugMode) code_count--; // Reduce useable code counts.
+            code_count_lbl->Text = "Remaining cheat code: " + std::to_string(code_count);
+            code_count_tick = 1; // Start reminder label animation.
         }
+
     } else {
         code_top = 0;
     }
